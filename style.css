@@ -7,6 +7,7 @@
 
 body {
     position: relative;
+    height: 100vh
 }
 /* header */
 header {
@@ -115,7 +116,7 @@ header {
 /* /header */
 /* aside */
 aside {
-    height: 85vh;
+    height: 88vh;
     width: 13vw;
     background-color: black;
     position: absolute;
@@ -126,6 +127,8 @@ aside {
 .aside-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .aside-top-container {
@@ -179,12 +182,102 @@ aside {
     color: white;
 }
 
+.playlist {
+    color: #b3b3b3;
+    height: 100%
+}
+
+.playlist-container {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.playlist h3 {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.playlist span {
+    font-weight: bold;
+}
+
+.playlist-create i {
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #b3b3b3;
+    margin-right: 10px;
+}
+
+.playlist-create:hover {
+    cursor: pointer;
+}
+
+.playlist-create:hover i {
+    background-color: white;
+    transition: 0.5s
+}
+
+.playlist-create:hover span {
+    color: white;
+    transition: 0.5s;
+}
 
 
+.playlist-favourite i {
+    color: #c8c8c8;
+    background-image: linear-gradient(to right bottom, #2d0b93, #654cb2, #9786ce, #c9c1e8, #9a9a9a);
+    padding: 5px;
+    font-size: 18px;
+    background-color: #b3b3b3;
+    margin-right: 10px;
+    transition: 0.5s
+}
+
+.playlist-favourite:hover {
+    cursor: pointer;
+}
+
+.playlist-favourite:hover span {
+    color: white;
+    transition: 0.5s
+}
+
+.playlist-favourite:hover i {
+    color: white;
+    background-image: linear-gradient(to right bottom, #4910f4, #7f5cfd, #ab93ff, #d4c9ff, #ffffff);
+}
+
+.aside-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding-right: 80px;
+}
+
+.aside-bottom i {
+    margin-right: 12px;
+}
+
+.aside-bottom a {
+    font-size: 15px;
+    color: #adadad;
+}
+
+.aside-bottom:hover {
+    cursor: pointer
+}
+
+.aside-bottom:hover a {
+    color: white;
+    text-decoration: none;
+}
 /* /aside */
 
 main {
-    height: 77vh;
+    height: 80vh;
     width: 87vw;
     background-color: yellow;
     position: absolute;
@@ -193,10 +286,10 @@ main {
 }
 
 footer {
-    height: 15vh;
+    height: 12vh;
     width: 100vw;
     background-color: blue;
     position: absolute;
     left: 0px;
-    top: 85vh;
+    top: 88vh;
 }
