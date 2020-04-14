@@ -285,21 +285,76 @@ main {
     left: 13vw;
 }
 
+section {
+    padding: 25px;
+}
+
 .section-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.section-top h2{
+.section-top h2 {
     font-size: 26px;
     font-weight: bold;
     color: white;
+    margin-top: 0px;
+}
+
+.section-top h2:hover {
+    text-decoration: underline;
 }
 
 .section-top a {
+    font-size: 12px;
     color: grey;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.section-subtitle h3 {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin-top: 5px;
+}
+
+.element-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.element {
+    background-color: #272727;
+    width: 165px;
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.element img {
+    width: 130px;
+    border-radius: 5px;
+}
+
+.element h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.element h5 {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #b2b2b2;
 }
 /* /main */
 /* footer */
