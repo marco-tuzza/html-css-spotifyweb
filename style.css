@@ -7,23 +7,21 @@
 
 body {
     position: relative;
-    height: 100vh
 }
 /* header */
 header {
-    height: 8vh;
-    width: 87vw;
+    height: 53px;
+    width: 100%;
     background-color: #121212;
     position: fixed;
     top: 0px;
-    left: 13vw;
-    z-index: 2;
+    padding-left: 200px
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-
+    align-items: baseline;
 }
 
 .header-left {
@@ -31,14 +29,11 @@ header {
     justify-content: space-around;
     width: 8%;
     height: 54px;
+    align-items: center;
 }
 
 .header-left span {
     color: #A0A0A0;
-    line-height: 100%;
-    background-color: black;
-    border-radius: 50%;
-    margin-top: 11px;
 }
 
 .header-left i {
@@ -49,6 +44,7 @@ header {
 .header-right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 80%;
 }
 
@@ -59,7 +55,18 @@ header {
 }
 
 .header-right button {
-    margin-right: 30px;
+    margin-right: 40px;
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.hamburger:hover {
+    color: white;
 }
 
 .upgrade {
@@ -67,7 +74,6 @@ header {
     background-color: transparent;
     border-radius: 20px;
     height: 60%;
-    margin-top: calc(8vh - 48px);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -88,7 +94,6 @@ header {
     background-color: black;
     border-radius: 20px;
     height: 60%;
-    margin-top: calc(8vh - 48px);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -117,12 +122,13 @@ header {
 /* /header */
 /* aside */
 aside {
-    height: 88vh;
-    width: 13vw;
+    height: 100%;
+    width: 200px;
     background-color: black;
     position: fixed;
     left: 0px;
     top: 0px;
+    padding-bottom: 80px;
 }
 
 .aside-container {
@@ -253,9 +259,9 @@ aside {
 
 .aside-bottom {
     display: flex;
-    justify-content: space-around;
     margin-bottom: 10px;
-    padding-right: 80px;
+    width: 100%;
+    padding-left: 16px;
 }
 
 .aside-bottom i {
@@ -263,7 +269,8 @@ aside {
 }
 
 .aside-bottom a {
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
     color: #adadad;
 }
 
@@ -279,6 +286,7 @@ aside {
 /* main */
 main {
     background-color: #121212;
+    height: 100%;
     padding-left: 200px;
     padding-top: 50px;
     padding-bottom: 100px;
@@ -358,7 +366,7 @@ section {
 /* /main */
 /* footer */
 footer {
-    height: 12vh;
+    height: 80px;
     width: 100vw;
     background-color: #282828;
     position: fixed;
@@ -397,14 +405,16 @@ footer {
 }
 
 .song-title h3 {
-    font-size: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 0px;
     color: white;
 }
 
 .song-artist h4 {
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 0px;
     color: #c8c8c8;
     display: inline;
@@ -448,7 +458,7 @@ footer {
 }
 
 .player-top i {
-    font-size: 14px;
+    font-size: 10px;
     color: #c8c8c8;
 }
 
@@ -465,10 +475,11 @@ footer {
 }
 
 .player-bottom {
-    width: 75%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .player-bottom span {
@@ -514,6 +525,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-right: 20px;
 }
 
 .footer-right i {
@@ -557,3 +569,72 @@ footer {
     background-color: #535353;
 }
 /* /footer */
+/* media-query */
+
+@media screen and (max-width: 1200px) {
+    .volume-range {
+        display: none;
+    }
+
+    .volume-icon {
+        display: none;
+    }
+
+    .mini-player {
+        display: none;
+    }
+
+    .header-right button p {
+        display: none;
+    }
+
+    .song-range div {
+        width: 150px;
+    }
+
+    .song-range:hover .range-left {
+        width: 137px
+    }
+
+    .player-top {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    header {
+        padding-left: 0;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .upgrade {
+        display: none;
+    }
+
+    .song-cover {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .song-range div {
+        width: 100px;
+    }
+
+    .song-range:hover .range-left {
+        width: 87px
+    }
+}
