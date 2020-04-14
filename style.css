@@ -15,13 +15,14 @@ header {
     background-color: #121212;
     position: fixed;
     top: 0px;
-    padding-left: 200px
+    padding-left: 200px;
+    z-index: 3;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 .header-left {
@@ -85,7 +86,7 @@ header {
 }
 
 .upgrade-link {
-    line-height: 10px;
+    line-height: 30px;
     padding: 5px 60px;
 }
 
@@ -129,6 +130,7 @@ aside {
     left: 0px;
     top: 0px;
     padding-bottom: 80px;
+    z-index: 4;
 }
 
 .aside-container {
@@ -232,6 +234,11 @@ aside {
     transition: 0.5s;
 }
 
+.playlist-favourite {
+    border-bottom: 1px solid #282828;
+    padding-bottom: 10px;
+}
+
 
 .playlist-favourite i {
     color: #c8c8c8;
@@ -307,10 +314,14 @@ section {
     font-weight: bold;
     color: white;
     margin-top: 0px;
+    margin-bottom: 4px;
 }
 
 .section-top h2:hover {
-    text-decoration: underline;
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
 }
 
 .section-top a {
@@ -335,11 +346,17 @@ section {
 .element {
     background-color: #272727;
     width: 165px;
+    height: 240px;
     border-radius: 8px;
     padding: 18px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    position: relative;
+}
+
+.element:hover {
+    cursor: pointer;
 }
 
 .element img {
@@ -362,6 +379,27 @@ section {
     margin-top: 10px;
     font-size: 12px;
     color: #b2b2b2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.play-element {
+    color: white;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: #1eb954;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.element-play {
+    display: none;
+}
+
+.element:hover .element-play {
+    display: block;
 }
 /* /main */
 /* footer */
@@ -374,6 +412,7 @@ footer {
     bottom: 0px;
     display: flex;
     border-top: 1px solid black;
+    z-index: 6;
 }
 
 .footer-left {
@@ -396,8 +435,8 @@ footer {
 }
 
 .song-detail {
-    height: 100%;
-    width: 50%;
+    height: 85%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -468,7 +507,7 @@ footer {
     cursor: pointer;
 }
 
-.fa-play {
+.play-footer {
     border: 1px solid #c8c8c8;
     border-radius: 50%;
     padding: 12px;
